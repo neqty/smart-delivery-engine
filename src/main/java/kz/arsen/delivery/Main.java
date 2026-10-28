@@ -13,7 +13,7 @@ public final class Main {
         var cheapest = new CheapestRouteStrategy();
         var eco = new EcoFriendlyRouteStrategy();
         var balanced = new BalancedRouteStrategy(0.4, 0.3, 0.1, 0.2);
-        List<RouteStrategy> strategies = List.of(fastest, cheapest, eco, balanced);
+        List<RouteStrategy> strategies = List.of(fastest, cheapest, eco, balanced, new DistanceFirstStrategy());
         List<Route> routes = DemoData.routes();
         var request = request(DeliveryPriority.STANDARD, 6000, 60, false);
         System.out.println("SMART DELIVERY ENGINE | 8 candidate routes");
