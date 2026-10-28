@@ -1,0 +1,135 @@
+SMART DELIVERY ENGINE | 8 candidate routes
+
+COMPARISON | budget 6000 KZT | deadline 60 min
+Fastest -> Route B | time 22 min | cost 4500.00 KZT | distance 15.0 km | CO2 3.50 kg | score 22.0000
+  Reason: Minimum effective time: 20 + traffic 2 + weather 0 = 22 min
+  Feasible A: score 30.0000
+  Feasible B: score 22.0000
+  Feasible C: score 42.0000
+  Feasible D: score 40.0000
+  Feasible E: score 35.0000
+  Feasible F: score 30.0000
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+Cheapest -> Route D | time 40 min | cost 2240.00 KZT | distance 18.0 km | CO2 3.00 kg | score 2240.0000
+  Reason: Minimum total cost: base 800.00 + 18.00 km * 80.00 + fees 0.00 + urgent surcharge 0.00 = 2240.00 KZT
+  Feasible A: score 4260.0000
+  Feasible B: score 4500.0000
+  Feasible C: score 2600.0000
+  Feasible D: score 2240.0000
+  Feasible E: score 2740.0000
+  Feasible F: score 2920.0000
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+Eco-friendly -> Route C | time 42 min | cost 2600.00 KZT | distance 10.0 km | CO2 0.50 kg | score 1.4500
+  Reason: Minimum eco score: 0.50 kg * 0.90 + 10.00 km * 0.10 = 1.4500
+  Feasible A: score 4.8000
+  Feasible B: score 4.6500
+  Feasible C: score 1.4500
+  Feasible D: score 4.5000
+  Feasible E: score 2.6000
+  Feasible F: score 2.6600
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+Balanced -> Route F | time 30 min | cost 2920.00 KZT | distance 14.0 km | CO2 1.40 kg | score 0.3617
+  Reason: Minimum weighted score: time 0.4000 * 0.40 + cost 0.3009 * 0.30 + distance 0.6000 * 0.10 + emissions 0.2571 * 0.20 = 0.3617
+  Feasible A: score 0.6681
+  Feasible B: score 0.5414
+  Feasible C: score 0.4678
+  Feasible D: score 0.6029
+  Feasible E: score 0.4121
+  Feasible F: score 0.3617
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+Distance-first -> Route E | time 35 min | cost 2740.00 KZT | distance 8.0 km | CO2 2.00 kg | score 8.0000
+  Reason: Minimum feasible distance: 8.00 km
+  Feasible A: score 12.0000
+  Feasible B: score 15.0000
+  Feasible C: score 10.0000
+  Feasible D: score 18.0000
+  Feasible E: score 8.0000
+  Feasible F: score 14.0000
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+
+RUNTIME SWITCHING | one RoutePlanner, three switches
+Fastest -> Route B | time 22 min | cost 4500.00 KZT | distance 15.0 km | CO2 3.50 kg | score 22.0000
+  Reason: Minimum effective time: 20 + traffic 2 + weather 0 = 22 min
+  Feasible A: score 30.0000
+  Feasible B: score 22.0000
+  Feasible C: score 42.0000
+  Feasible D: score 40.0000
+  Feasible E: score 35.0000
+  Feasible F: score 30.0000
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+Cheapest -> Route D | time 40 min | cost 2240.00 KZT | distance 18.0 km | CO2 3.00 kg | score 2240.0000
+  Reason: Minimum total cost: base 800.00 + 18.00 km * 80.00 + fees 0.00 + urgent surcharge 0.00 = 2240.00 KZT
+  Feasible A: score 4260.0000
+  Feasible B: score 4500.0000
+  Feasible C: score 2600.0000
+  Feasible D: score 2240.0000
+  Feasible E: score 2740.0000
+  Feasible F: score 2920.0000
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+Eco-friendly -> Route C | time 42 min | cost 2600.00 KZT | distance 10.0 km | CO2 0.50 kg | score 1.4500
+  Reason: Minimum eco score: 0.50 kg * 0.90 + 10.00 km * 0.10 = 1.4500
+  Feasible A: score 4.8000
+  Feasible B: score 4.6500
+  Feasible C: score 1.4500
+  Feasible D: score 4.5000
+  Feasible E: score 2.6000
+  Feasible F: score 2.6600
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+Balanced -> Route F | time 30 min | cost 2920.00 KZT | distance 14.0 km | CO2 1.40 kg | score 0.3617
+  Reason: Minimum weighted score: time 0.4000 * 0.40 + cost 0.3009 * 0.30 + distance 0.6000 * 0.10 + emissions 0.2571 * 0.20 = 0.3617
+  Feasible A: score 0.6681
+  Feasible B: score 0.5414
+  Feasible C: score 0.4678
+  Feasible D: score 0.6029
+  Feasible E: score 0.4121
+  Feasible F: score 0.3617
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+
+AUTOMATIC SELECTION | different requests
+Request: DeliveryRequest[priority=URGENT, maxBudget=10000.0, maxDeliveryMinutes=25, ecoPreferred=false, maxEmissionKg=10.0, prohibitedRouteIds=[]]
+Fastest -> Route H | time 17 min | cost 8600.00 KZT | distance 20.0 km | CO2 5.00 kg | score 17.0000
+  Reason: Minimum effective time: 16 + traffic 1 + weather 0 = 17 min
+  Feasible B: score 22.0000
+  Feasible H: score 17.0000
+  Rejected A: Delivery deadline exceeded
+  Rejected C: Delivery deadline exceeded
+  Rejected D: Delivery deadline exceeded
+  Rejected E: Delivery deadline exceeded
+  Rejected F: Delivery deadline exceeded
+  Rejected G: Route unavailable
+Request: DeliveryRequest[priority=ECONOMY, maxBudget=2500.0, maxDeliveryMinutes=60, ecoPreferred=false, maxEmissionKg=10.0, prohibitedRouteIds=[]]
+Cheapest -> Route D | time 40 min | cost 2240.00 KZT | distance 18.0 km | CO2 3.00 kg | score 2240.0000
+  Reason: Minimum total cost: base 800.00 + 18.00 km * 80.00 + fees 0.00 + urgent surcharge 0.00 = 2240.00 KZT
+  Feasible D: score 2240.0000
+  Rejected A: Budget exceeded
+  Rejected B: Budget exceeded
+  Rejected C: Budget exceeded
+  Rejected E: Budget exceeded
+  Rejected F: Budget exceeded
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+Request: DeliveryRequest[priority=STANDARD, maxBudget=4000.0, maxDeliveryMinutes=60, ecoPreferred=true, maxEmissionKg=10.0, prohibitedRouteIds=[]]
+Eco-friendly -> Route C | time 42 min | cost 2600.00 KZT | distance 10.0 km | CO2 0.50 kg | score 1.4500
+  Reason: Minimum eco score: 0.50 kg * 0.90 + 10.00 km * 0.10 = 1.4500
+  Feasible C: score 1.4500
+  Feasible D: score 4.5000
+  Feasible E: score 2.6000
+  Feasible F: score 2.6600
+  Rejected A: Budget exceeded
+  Rejected B: Budget exceeded
+  Rejected G: Route unavailable
+  Rejected H: Budget exceeded
+
+EXPECTED FAILURES
+Empty routes: No suitable route for Fastest
+No feasible route: No suitable route for Fastest
+Invalid weights: Balanced weights must sum to 1.0
